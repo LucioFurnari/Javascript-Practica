@@ -39,9 +39,29 @@ document.body.appendChild(contenedorCard);
 
 //////////////////
 const form = document.querySelector("#formulario");
-console.log(form);
-form.addEventListener("submit", ejecutarApi);
 
+// form.addEventListener("submit", ejecutarApi);
+const inputs = document.querySelectorAll("#formulario input")
+
+
+const validarFormulario = (e) => {
+    console.log(e.target.name);
+};
+
+inputs.forEach((input)=>{
+    input.addEventListener("blur", validarFormulario)
+    input.addEventListener("keydown", validarFormulario)
+});
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    console.log("Formulario Enviado");
+});
+
+
+
+
+//////////////////
 function ejecutarApi(e) {
     // e.preventDeafault();
     console.log(e);
@@ -64,13 +84,13 @@ function changeText() {
 function createDiv() {
     for(let i=0;i < 5;i++){
         div = document.createElement("div");
-        div.classList.add("divClass")
+        div.classList.add(`divClass`)
         document.body.appendChild(div);
-        
+        // div.addEventListener("click", ()=>{
+        //     window.setTimeout(()=>{document.querySelector(`.divClass`).style.backgroundColor = "green"}, 2000)
+        // })
     }
-    div.addEventListener("click", ()=>{
-        window.setTimeout(()=>{document.querySelector(`.divClass`).style.backgroundColor = "green"}, 2000)
-    })
+    
 }
 
 
