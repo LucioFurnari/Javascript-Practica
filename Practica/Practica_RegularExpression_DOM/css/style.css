@@ -1,9 +1,15 @@
+/* .formulario input{
+    padding: 5px;
+    color: red;
+} */
+/* 
+
 .alert {
     display: none;
-}
+} */
 
 .formulario_correcto {
-    display: none;
+    color: green;
 }
 
 .formulario_incorrecto {
