@@ -1,0 +1,11 @@
+.alert {
+    display: none;
+}
+
+.formulario_correcto {
+    display: none;
+}
+
+.formulario_incorrecto {
+    color: red;
+}
