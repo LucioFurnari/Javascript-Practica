@@ -1,0 +1,45 @@
+/* .formulario input{
+    padding: 5px;
+    color: red;
+} */
+/* 
+
+.alert {
+    display: none;
+} */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.text {
+    background-color: red;
+}
+.text_password{
+    background-color: aquamarine;
+}
+
+.text_email {
+    background-color: greenyellow;
+}
+
+#formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(152, 63, 194);
+
+    border-radius: 10px;
+}
+
+.formulario_correcto {
+    color: green;
+}
+
+.formulario_incorrecto {
+    color: red;
+}
