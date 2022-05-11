@@ -1,0 +1,26 @@
+
+#template-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(192, 69, 192);
+    border: 2px solid rgb(228, 163, 182);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    
+}
+
+.cards img {
+    width: 300px;
+    
+}

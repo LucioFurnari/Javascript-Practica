@@ -22,13 +22,13 @@ const cardsContent = [
 ];
 
 cardsContent.forEach((el) => {
-    $templatecard.querySelector("img").setAttribute("src", el.img);
-    $templatecard.querySelector("img").setAttribute("alt", el.title);
-    $templatecard.querySelector("h5").textContent = el.title;
+    $cards.firstElementChild.setAttribute("src", el.img);
+    $cards.firstElementChild.setAttribute("alt", el.title);
+    $cards.lastElementChild.textContent = el.title;
     
-    let $clone = document.importNode($templatecard, true);
+    let $clone = document.importNode($cards, true);
     $fragment.appendChild($clone);   
 });
-
+$templatecard.removeChild($cards)
 $templatecard.appendChild($fragment);
 console.log($cards);
