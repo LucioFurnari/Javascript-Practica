@@ -1,10 +1,11 @@
 //Selectores
 const $Selector = document.querySelector("#selector");
-const $option = document.querySelector("#selector option");
-const $ContainerDiv = document.querySelector(".container");
-$option.innerText = "Marca";
-console.log($option);
+const $option = document.querySelectorAll("select#selector > option");//Toma los option del selector
+const $ContainerDiv = document.querySelectorAll("div.container > p");
 
+
+console.log($option);
+console.log($ContainerDiv);
 //DataBase
 const optionList = [
     {
@@ -18,9 +19,10 @@ const coloresList = {
     }
 }
 
-$option.innerHTML = JSON.stringify(optionList[0]);
-$option.innerHTML = coloresList.Color.color;
-
 ///
-
-$ContainerDiv.querySelector("p").textContent = coloresList.Color.color;
+$option.innerText = JSON.stringify(optionList[0]);
+$option[0].innerText = coloresList.Color.color;
+$option[1].innerText = "Marca";
+///
+$ContainerDiv[0].textContent = coloresList.Color.color;
+$ContainerDiv[1].textContent = coloresList.Color.color;
