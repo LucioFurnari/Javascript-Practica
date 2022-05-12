@@ -11,12 +11,12 @@ const strProduct = JSON.stringify(producto);
 localStorage.setItem("Producto",strProduct);
 
 const meses = ["Enero","Febrero","Marzo"]; //Crea Array
-const strMeses = JSON.stringify(meses); //Lo convierte a stringa, el localStorage solo muestra string
+const strMeses = JSON.stringify(meses); //Lo convierte a string, el localStorage solo muestra string
 localStorage.setItem("Meses",strMeses); //Guarda Array en localStorage
 
-//Sacarlo del localStorage
+//Tomar del localStorage
 
-const localMeses = localStorage.getItem("Meses");
+const localMeses = localStorage.getItem("Meses");//Tomar elemento del localStorage
 console.log(localMeses);
 const strLocalMeses = JSON.parse(localMeses) //Transforma un string en objeto
 console.log(strLocalMeses);
