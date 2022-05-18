@@ -10,9 +10,17 @@ const aplicarDescuento = new Promise((resolve, reject)=>{
 aplicarDescuento
     .then(res => {
         console.log(res);
+        const aviso = document.querySelector("#promesa");
+        const parrafo = document.createElement("p");
+        parrafo.textContent = res;
+        aviso.appendChild(parrafo);
     })
     .catch(error => {
         console.log(error);
+        const aviso = document.querySelector("#promesa");
+        const parrafo = document.createElement("p");
+        parrafo.textContent = error;
+        aviso.appendChild(parrafo);
     })
 
 console.log(aplicarDescuento);

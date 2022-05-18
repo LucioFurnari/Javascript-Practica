@@ -7,8 +7,9 @@ const $ContainerDiv = document.querySelectorAll("div.card > p");
 const $ContainerCardTitle = document.querySelector("div.card > h2");
 const $ContainerCardImage = document.querySelector("div.card > img");
 
-console.log($option);
-console.log($ContainerDiv);
+// console.log($option);
+// console.log($ContainerDiv);
+
 // DataBase
 const optionList = [
     {
@@ -29,11 +30,6 @@ const optionList = [
         image:"css/images/don_satur.png"
     }
 ]
-const coloresList = {
-    Color: {
-        color:"rojo",
-    }
-}
 
 // Function
 
