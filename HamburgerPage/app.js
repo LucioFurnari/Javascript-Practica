@@ -1,4 +1,5 @@
 const divContainer = document.querySelector(".container");
+const orderCard = document.querySelector(".orderCard div ul")
 
 function createItems(item) {
     const div = document.createElement("div");
@@ -8,11 +9,22 @@ function createItems(item) {
     const price = document.createElement("p");
     const button = document.createElement("button");
 
+    button.addEventListener("click",() => {
+        let ordenPrice = item.price;
+        let ordenName = item.hamburger;
+        const list = document.createElement("li");
+        list.textContent = ordenName;
+        orderCard.appendChild(list);
+        console.log(ordenName);
+        console.log(ordenPrice);
+        
+    })
+
     img.setAttribute("src",item.img);
     parraf.textContent = item.hamburger;
     price.textContent = `$${item.price}`;
     description.textContent = item.description;
-    button.textContent = "BUY";
+    button.textContent = "Order Now";
 
     div.appendChild(parraf);
     div.appendChild(description);
@@ -23,3 +35,4 @@ function createItems(item) {
 }
 
 hamburguersList.forEach(item => {createItems(item)});
+
