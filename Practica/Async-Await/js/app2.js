@@ -16,9 +16,18 @@ function descargarProductos(){
     })
 }
 
-const app = ()=> {
-    descargarClientes()
-    descargarProductos()
+const app = async ()=> {
+    try {
+        // const clientes = await descargarClientes()
+        // console.log(clientes);
+        // const productos = await descargarProductos()
+        // console.log(productos);
+
+        const respuesta = await Promise.all([descargarClientes(),descargarProductos()])
+        console.log(respuesta);
+    } catch (error){
+        console.log(error);
+    }
 }
 
 app()
