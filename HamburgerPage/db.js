@@ -2,7 +2,7 @@ const hamburguersList = [
     {
         id:1,
         hamburger:"Simple",
-        description:"Hamburguesa simple con tomate, lechuga y adereso",
+        description:"Hamburguesa simple con tomate, lechuga y aderezo",
         price:100,
         img:"images/hamburger.jpg",
     },
