@@ -1,4 +1,23 @@
-.container {
+:root {
+    --ButtonHover:rgb(230, 92, 38);
+    --cardBackground:rgb(241, 143, 87);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.main {
+    display: flex;
+    
+    justify-content: space-evenly;
+    
+}
+
+.cardContainer {
     display: grid;
     grid-template-columns: repeat(3,auto);
     /* grid-template-rows: 500px 500px; */
@@ -6,19 +25,56 @@
     gap: 10px;
 }
 
-.container div {
+.card {
     border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--cardBackground);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    width: 400px;
-
+    /* width: 400px; */
     /* width: 500px;
     height: 500px; */
 }
 
-.container img {
+.card p {
+    font-size: 18px;
+}
+
+.card button {
+    border:  none;
+    padding: 10px;
+    font-weight: 600;
+}
+.card button:hover{
+    background-color: var(--ButtonHover);
+    color: white;
+}
+.card img {
+    width: 20rem;
+    border-radius: 10px;
+}
+
+.orderCard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
     width: 300px;
+    border: 1px solid black;
+}
+
+.orderCard ul{
+    list-style: none;
+}
+
+.orderCard button {
+    padding: 5px;
+    border: none;
+    color: red;
+    
 }

@@ -40,5 +40,5 @@ const hamburguersList = [
         description:"lorem",
         price:175,
         img:"images/hamburger.jpg"
-    }
+    },
 ]
