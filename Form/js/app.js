@@ -3,13 +3,13 @@ const inputTitle = document.querySelector("#titleInput");
 const inputText = document.querySelector("#textInput");
 const button = document.querySelector("#formSubmit");
 
-const ArrayTest = [];
 
 
 console.log(button);
 
 function getValue(event) {
     event.preventDefault()
+    ArrayTest = [];
     vTitle = inputTitle.value
     vText = inputText.value
     obj = {
@@ -21,7 +21,8 @@ function getValue(event) {
     console.log(vText);
     console.log("Hola esto es un submit");
     console.log(ArrayTest);
-    return ArrayTest
+    return obj
+    window.localStorage.setItem(obj.tittle,obj.text)
 }
-
 Form.addEventListener("submit",getValue);
+
