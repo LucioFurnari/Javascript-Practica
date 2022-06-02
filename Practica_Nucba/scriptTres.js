@@ -43,13 +43,28 @@ const form = document.querySelector("#formulario");
 // form.addEventListener("submit", ejecutarApi);
 const inputs = document.querySelectorAll("#formulario input")
 
+const expresiones = {
+    usuario:/[a-zA-Z][a-zA-Z0-9-_]{3,32}/gi
+};
 
 const validarFormulario = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
+    switch (e.target.name){
+        case "usuario":
+            if(expresiones.usuario.test(e.target.name)){
+                console.log("Correcto");
+            } else{
+                console.log("Incorrecto");
+            }
+            break;
+        default:
+            break;
+            
+    }
 };
 
 inputs.forEach((input)=>{
-    input.addEventListener("blur", validarFormulario)
+    // input.addEventListener("blur", validarFormulario)
     input.addEventListener("keydown", validarFormulario)
 });
 

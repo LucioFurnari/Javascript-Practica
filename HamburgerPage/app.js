@@ -10,9 +10,11 @@ let total = 0 //Total mostrado en la orden.
 function createItems(item) {
     const Card = document.createElement("div");
     Card.classList.add("card");
-    const parraf = document.createElement("p");
+    const cardTitle = document.createElement("h3");
     const img = document.createElement("img");
     const description = document.createElement("p");
+
+    /// Elementos del orden Card
     const price = document.createElement("p");
     const button = document.createElement("button");
     
@@ -45,12 +47,12 @@ function createItems(item) {
     })
 
     img.setAttribute("src",item.img);
-    parraf.textContent = item.hamburger;
+    cardTitle.textContent = item.hamburger;
     price.textContent = `$${item.price}`;
     description.textContent = item.description;
     button.textContent = "Order Now";
 
-    Card.appendChild(parraf);
+    Card.appendChild(cardTitle);
     Card.appendChild(description);
     Card.appendChild(img);
     Card.appendChild(price);

@@ -52,6 +52,10 @@ body {
     height: 500px; */
 }
 
+.card h3 {
+    border-bottom: 2px solid black; 
+}
+
 .card p {
     font-size: 18px;
     text-align: center;

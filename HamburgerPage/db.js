@@ -9,14 +9,14 @@ const hamburguersList = [
     {
         id:2,
         hamburger:"Doble",
-        description:"lorem",
+        description:"Doble hamburguesa con tomate, lechuga, queso y aderezo",
         price:200,
         img:"images/hamburger.jpg"
     },
     {
         id:3,
         hamburger:"Con panceta y cebolla",
-        description:"lorem",
+        description:"Hamburguesa con panceta, cebolla, queso y aderezo",
         price:250,
         img:"images/hamburger.jpg"
     },

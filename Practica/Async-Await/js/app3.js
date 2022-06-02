@@ -17,22 +17,14 @@ function mostrarHTML (datos) {
     
     datos.map(dato => {
         const parraf = document.createElement("p");
+        const image = document.createElement("img");
         parraf.textContent = dato.author;
+        image.setAttribute("src",dato.post_url);
         body.appendChild(parraf);
+        body
     })
 }
 
-const obtenerDatos = async () => {
-    try {
-        fetch(url)
-        const datos =  await datos.json()
-        const photos = await photos
-        console.log(photos);
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
 
 const obtenerDatosAsync = async () => {
     try {
