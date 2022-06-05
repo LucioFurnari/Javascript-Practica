@@ -5,8 +5,7 @@
     line-height: 1.6;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
-
+/* //////////// */
 
 .nav-container{
     background-image: url("images/background-image.jpg");
@@ -15,11 +14,26 @@
     background-position:center;
     
     height: 100vh;
-    /* box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-    border-bottom:1px solid rgba(255, 255, 255, 0.3) ;
-    background-color: rgba(255,255,255,0.3);
-    backdrop-filter: blur(20px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
+
+/* //////////// */
+.head-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.head-content{
+    width: 70%;
+    height: 50%;
+
+    background-color: rgba(255,255,255,0.3);
+} 
 
 .nav-menu{
     display: flex;
@@ -63,7 +77,13 @@
 .nav-button:hover{
     background-color: red;
 }
+/* //////////// */
 
+.empty-space{
+    height: 30px;
+}
+
+/* //////////// */
 .main-container {
     display: flex;
     justify-content: center;
@@ -89,8 +109,8 @@
 .img-gallery button {
     position: relative;
     border: none;
-    background-color: rgba(255,255,255,0.3);
-    backdrop-filter: blur(20px);
+    background-color: rgba(255,255,255,0.5);
+    /* backdrop-filter: blur(10%); */
     /* width: 24px; */
     padding: 40px 10px;
 }
