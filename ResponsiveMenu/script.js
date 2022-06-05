@@ -1,7 +1,10 @@
-const Button = document.querySelector(".nav-button");
+const NavMenuButton = document.querySelector(".nav-button");
 const NavMenu = document.querySelector(".nav-links");
 
-const Img = document.querySelector(".img-gallery img")
+const Img = document.querySelector(".img-gallery img");
+
+const ButtonLeft = document.querySelector(".button-left");
+const ButtonRight = document.querySelector(".button-right");
 
 const Images = [
     {
@@ -23,6 +26,18 @@ const Images = [
 
 Img.setAttribute("src",Images[0].url)
 
-Button.addEventListener("click", () => {
+NavMenuButton.addEventListener("click", () => {
     NavMenu.classList.toggle("nav-links-toggle")
+});
+
+let cont = 1;
+ButtonRight.addEventListener("click", () => {   
+    if( cont < Images.length){
+        console.log(cont);
+        Img.setAttribute("src", Images[cont].url)
+        cont++
+    }  
+})
+ButtonLeft.addEventListener("click", () => {
+    
 });
