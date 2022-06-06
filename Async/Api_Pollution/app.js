@@ -30,15 +30,6 @@ async function Apifetch(lat,lon){
                 createList(property,components[property])
             }
         }
-        // const respuesta = await fetch(url)
-        // const data = await respuesta.json()
-        // console.log(data);
-        // console.log(data.list[0].components);
-
-        // const components = data.list[0].components;
-        // for (const property in components){
-        //     console.log(`${property}: ${components[property]}`);
-        // }
     } catch (err) {
         console.log(err);  
     }
