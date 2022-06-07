@@ -1,26 +1,33 @@
 const inputLatitude = document.querySelector("#latitude");
 const inputLongitude = document.querySelector("#longitude");
 const btnSubmit = document.querySelector("#submit");
+const btnClean = document.querySelector(".clean-btn");
 const form = document.querySelector("#formulario");
-
+const ListContainer = document.querySelector(".list-container");
 const lista = document.querySelector(".list");
+
 const DivAqi = document.querySelector(".main-aqi");
+
+// Funciones //
 
 function createList(key,value){
     const list_item = document.createElement("li");
     list_item.textContent = `${key}: ${value}`;
     lista.appendChild(list_item)
-    setTimeout(() => {
-        lista.removeChild(list_item)
-    }, 5000);
 }
+
+
+
 function AirQualityIndex(aqi){
     switch (aqi) {
+        case 0:
+            DivAqi.style.backgroundColor = "limegreen";
+            break;
         case 1:
-            DivAqi.style.backgroundColor = "green";
+            DivAqi.style.backgroundColor = "limegreen";
             break;
         case 2:
-            DivAqi.style.backgroundColor = "limegreen";
+            DivAqi.style.backgroundColor = "green";
             break;
         case 3:
             DivAqi.style.backgroundColor = "yellow";
@@ -35,6 +42,8 @@ function AirQualityIndex(aqi){
             break;
     }
 }
+
+// Funcion asincrona / Fetch //
 async function Apifetch(lat,lon){
     try {
         if(lat == "" || lon == "") {
@@ -53,6 +62,7 @@ async function Apifetch(lat,lon){
 
             for (const property in components){
                 createList(property,components[property])
+                // console.log(createList(property,components[property]));
             }
             AirQualityIndex(aqi)
         }
@@ -61,8 +71,12 @@ async function Apifetch(lat,lon){
     }
 }
 
+// Event //
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     Apifetch(inputLatitude.value,inputLongitude.value)
+})
+btnClean.addEventListener("click", () => {
+    lista.innerHTML = "";
 })
