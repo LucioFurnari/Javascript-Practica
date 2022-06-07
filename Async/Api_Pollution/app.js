@@ -4,6 +4,7 @@ const btnSubmit = document.querySelector("#submit");
 const form = document.querySelector("#formulario");
 
 const lista = document.querySelector(".list");
+const DivAqi = document.querySelector(".main-aqi");
 
 function createList(key,value){
     const list_item = document.createElement("li");
@@ -13,7 +14,27 @@ function createList(key,value){
         lista.removeChild(list_item)
     }, 5000);
 }
-
+function AirQualityIndex(aqi){
+    switch (aqi) {
+        case 1:
+            DivAqi.style.backgroundColor = "green";
+            break;
+        case 2:
+            DivAqi.style.backgroundColor = "limegreen";
+            break;
+        case 3:
+            DivAqi.style.backgroundColor = "yellow";
+            break;
+        case 4:
+            DivAqi.style.backgroundColor = "orange";
+            break;
+        case 5:
+            DivAqi.style.backgroundColor = "red";
+            break;
+        default:
+            break;
+    }
+}
 async function Apifetch(lat,lon){
     try {
         if(lat == "" || lon == "") {
@@ -25,10 +46,15 @@ async function Apifetch(lat,lon){
             const respuesta = await fetch(url)
             const data = await respuesta.json()
             console.log(data);
+
             const components = data.list[0].components
+            const aqi = data.list[0].main.aqi
+            console.log(aqi);
+
             for (const property in components){
                 createList(property,components[property])
             }
+            AirQualityIndex(aqi)
         }
     } catch (err) {
         console.log(err);  
