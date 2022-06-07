@@ -5,25 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Api Pollution</title>
 </head>
 <body>
-    <div class="form-container">
-        <form action="#" method="post" id="formulario">
-            <input type="number" id="latitude"  min="-90" max="90" placeholder="Latitud">
-            <input type="number" id="longitude" min="-180" max="180" placeholder="Longitud">
-            <button type="submit" id="submit">Submit</button>
-        </form>
-    </div>
-    <div class="list-container">
-        <button class="clean-btn">Clean</button>
-        <ul class="list">
-        </ul>
-        <div class="main-aqi">
-
+    <div class="main">
+        <div class="form-container">
+            <form action="#" method="post" id="formulario">
+                <input type="number" id="latitude"  min="-90" max="90" placeholder="Latitud">
+                <input type="number" id="longitude" min="-180" max="180" placeholder="Longitud">
+                <button type="submit" id="submit">Submit</button>
+            </form>
         </div>
-    </div>
+        <div class="list-container">
+            <p class="input-vacio"></p>
+            <ul class="list">
+            </ul>
+            <div class="main-aqi">
+            </div>
+            <button class="clean-btn">Clean</button>
+        </div>
+        </div> 
     <script src="app.js"></script>
 </body>
 </html>

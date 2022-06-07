@@ -6,6 +6,7 @@ const form = document.querySelector("#formulario");
 const ListContainer = document.querySelector(".list-container");
 const lista = document.querySelector(".list");
 
+const inputVacioError = document.querySelector(".input-vacio");
 const DivAqi = document.querySelector(".main-aqi");
 
 // Funciones //
@@ -47,8 +48,10 @@ function AirQualityIndex(aqi){
 async function Apifetch(lat,lon){
     try {
         if(lat == "" || lon == "") {
+            inputVacioError.textContent = "No deje el formulario en blanco";
             console.log("No deje el formulario en blanco");
         }else {
+            inputVacioError.textContent ="";
             const latitude = parseInt(lat)
             const longitude = parseInt(lon)
             const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${"4bdda9b7b6a4d3a1dd20a4a879e28e91"}`    
