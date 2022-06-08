@@ -82,4 +82,5 @@ form.addEventListener("submit", (e) => {
 })
 btnClean.addEventListener("click", () => {
     lista.innerHTML = "";
+    DivAqi.style.backgroundColor = "transparent"
 })
