@@ -1,4 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(90deg, rgba(113,212,213,1) 0%, rgba(103,184,214,1) 44%, rgba(66,221,201,1) 96%);
+}
 
 .response-container {
     background-color:rgb(44, 44, 44);
+    color: white;
 }
