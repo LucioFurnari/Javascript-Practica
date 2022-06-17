@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> 
+
     <link rel="shortcut icon" href="#"> <!-- Este link esta para impedir un error, sacar si es necesario -->
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -13,11 +17,11 @@
 <body>
     <div class="container">
         <form action="#" method="post" id="weather-form">
-            <input type="text" id="city-name">
+            <input type="text" id="city-name" placeholder="Ciudad">
             <select id="country-code">
-                <option>Elija un Pais</option>
+                <option disabled value="">Elija un Pais</option>
                 <option value="AR">Argentinas</option>
-                <option value="USA">Estados Unidos</option>
+                <option value="US">Estados Unidos</option>
             </select>
             <button type="submit" id="submit-btn">Submit</button>
         </form>
