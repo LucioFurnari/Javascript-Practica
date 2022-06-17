@@ -1,8 +1,9 @@
+import { bcChangeColor } from "./bg.js";
 
-const img = document.querySelector(".response-container img");
-const temp = document.querySelector(".response-container .temp");
-const tempMax = document.querySelector(".response-container .temp-max");
-const tempMin = document.querySelector(".response-container .temp-min");
+const img = document.querySelector(".response-container img"),
+    temp = document.querySelector(".response-container .temp"),
+    tempMax = document.querySelector(".response-container .temp-max"),
+    tempMin = document.querySelector(".response-container .temp-min");
 
 export async function APICall (city,country){
     const ApiKey ="4bdda9b7b6a4d3a1dd20a4a879e28e91";
@@ -14,6 +15,8 @@ export async function APICall (city,country){
         if(data.cod == 404){
             temp.textContent = "Ciudad no encontrada";
         }
+        bcChangeColor(data.weather[0].main)
+
         img.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
         temp.textContent = `Temperatura: ${data.main.temp} °C` ;
         tempMax.textContent = `Temp Max: ${data.main.temp_max} °C`;
